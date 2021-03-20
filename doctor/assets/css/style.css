@@ -1095,7 +1095,8 @@ textarea.form-control {
   margin: 0 auto;
   padding: 20px;
   width: 400px;
-  border-radius: 4px;
+  border-radius: 8px;
+  box-shadow: rgb(14 14 14 / 10%) 0px 4px 8px 0px;
 }
 .account-logo {
   margin-bottom: 20px;
@@ -1106,7 +1107,7 @@ textarea.form-control {
 }
 .account-box a {
   color: #333;
-  font-size: 14px;
+  font-size: 13px;
 }
 .account-box a:hover {
   color: #2962ff;
@@ -1115,7 +1116,7 @@ textarea.form-control {
   border: 1px solid #eaeaea;
   border-radius: 4px;
   box-shadow: inherit;
-  font-size: 14px;
+  font-size: 13px;
   height: 40px;
 }
 .account-box textarea.form-control {
@@ -1123,7 +1124,7 @@ textarea.form-control {
 }
 .account-box label {
   color: #323232;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
 }
 .account-logo img {
@@ -1132,12 +1133,18 @@ textarea.form-control {
 }
 .account-box .account-btn {
   border-radius: 50px;
-  font-size: 16px;
+  font-size: 13px;
   min-width: 150px;
   padding: 8px 30px;
   text-transform: uppercase;
 }
-
+.forgot-password a {
+  color: #ff444f !important;
+  font-size: 12px;
+}
+.register-link {
+  font-size: 13px;
+}
 /*-----------------
 	9. Dashboard
 -----------------------*/
