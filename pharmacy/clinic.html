@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- doctors23:12-->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+    />
+    <title>Saludo - The best online telemedicine in Malaysia</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/select2.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap-datetimepicker.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.min.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <div class="header">
+        <div class="header-left">
+          <a href="index.html" class="logo">
+            <img src="assets/img/logo.png" width="35" height="35" alt="" />
+            <span>Saludo</span>
+          </a>
+        </div>
+        <a id="toggle_btn" href="javascript:void(0);"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"
+          ><i class="fa fa-bars"></i
+        ></a>
+        <ul class="nav user-menu float-right">
+          <li class="nav-item dropdown d-none d-sm-block">
+            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"
+              ><i class="fa fa-bell-o"></i>
+              <span class="badge badge-pill bg-danger float-right">2</span></a
+            >
+            <div class="dropdown-menu notifications">
+              <div class="topnav-dropdown-header">
+                <span>Notifications</span>
+              </div>
+              <div class="drop-scroll">
+                <ul class="notification-list">
+                  <li class="notification-message">
+                    <a>
+                      <div class="media">
+                        <span class="avatar">
+                          <img
+                            alt="Farmasi Indah"
+                            src="assets/img/user-05.jpg"
+                            class="img-fluid"
+                          />
+                        </span>
+                        <div class="media-body">
+                          <p class="noti-details">
+                            <span class="noti-title">Jenny</span> added new task
+                            <span class="noti-title"
+                              >Restock paracetamol (300 unit)</span
+                            >
+                          </p>
+                          <p class="noti-time">
+                            <span class="notification-time">4 mins ago</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="notification-message">
+                    <a>
+                      <div class="media">
+                        <span class="avatar">V</span>
+                        <div class="media-body">
+                          <p class="noti-details">
+                            <span class="noti-title">Sarah Arisa</span>
+                            changed the task name
+                            <span class="noti-title"
+                              >Delivery cancelled for Patent #1432</span
+                            >
+                          </p>
+                          <p class="noti-time">
+                            <span class="notification-time">6 mins ago</span>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="topnav-dropdown-footer">
+                <a>View all Notifications</a>
+              </div>
+            </div>
+          </li>
+          <!-- <li class="nav-item dropdown d-none d-sm-block">
+            <a
+              href="javascript:void(0);"
+              id="open_msg_box"
+              class="hasnotifications nav-link"
+              ><i class="fa fa-comment-o"></i>
+              <span class="badge badge-pill bg-danger float-right">3</span></a
+            >
+          </li> -->
+          <li class="nav-item dropdown has-arrow">
+            <a
+              href="#"
+              class="dropdown-toggle nav-link user-link"
+              data-toggle="dropdown"
+            >
+              <span class="user-img">
+                <img
+                  class="rounded-circle"
+                  src="assets/img/pharmacy-logo.png"
+                  width="24"
+                  alt="Admin"
+                />
+                <span class="status online"></span>
+              </span>
+              <span class="admin-title">Farmasi Indah</span>
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item">My Profile</a>
+              <a class="dropdown-item">Edit Profile</a>
+              <a class="dropdown-item">Settings</a>
+              <a class="dropdown-item" href="login.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+        <div class="dropdown mobile-user-menu float-right">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            data-toggle="dropdown"
+            aria-expanded="false"
+            ><i class="fa fa-ellipsis-v"></i
+          ></a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="profile.html">My Profile</a>
+            <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+            <a class="dropdown-item" href="settings.html">Settings</a>
+            <a class="dropdown-item" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+          <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+              <li class="menu-title">Main</li>
+              <li>
+                <a href="index.html"
+                  ><i class="fa fa-dashboard"></i> <span>Dashboard</span></a
+                >
+              </li>
+              <li>
+                <a href="patients.html"
+                  ><i class="fa fa-wheelchair"></i> <span>Patients</span></a
+                >
+              </li>
+              <li class="active">
+                <a href="clinic.html"
+                  ><i class="fa fa-user-md"></i> <span>Clinic</span></a
+                >
+              </li>
+              <li>
+                <a href="medicines-lists.html"
+                  ><i class="fa fa-th-list"></i> <span>Medicine</span></a
+                >
+              </li>
+              <!-- <li>
+                <a href="chat.html"
+                  ><i class="fa fa-comments"></i> <span>Chat</span>
+                  <span class="badge badge-pill bg-primary float-right"
+                    >5</span
+                  ></a
+                >
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="page-wrapper">
+        <div class="content">
+          <div class="row">
+            <div class="col-12">
+              <h4 class="page-title">Clinics</h4>
+            </div>
+          </div>
+          <div class="row doctor-grid">
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/ls.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>Poliklinik MUC</a>
+                </h4>
+                <div class="doc-prof">88 Jalan Alor</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-2142 5814
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/ls6.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>Klinik Teh</a>
+                </h4>
+                <div class="doc-prof">106, Jalan Ss21/35</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-7727 2268
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/default.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>Klinik Reddy</a>
+                </h4>
+                <div class="doc-prof">Ampang Point Shopping Centre</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-4257 6230
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/ls5.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>ParkCity Medical Centre 1</a>
+                </h4>
+                <div class="doc-prof">2, Jalan Intisari Perdana</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-5639 1212
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/ls4.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>Klinik Sharani</a>
+                </h4>
+                <div class="doc-prof">20, Jalan Bangsar Utama 1</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-2287 3103
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/default.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>Mediprime Clinic</a>
+                </h4>
+                <div class="doc-prof">9-1, Jalan 14/22</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-7957 0232
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/default.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>NG Yew Teck</a>
+                </h4>
+                <div class="doc-prof">1, Jalan 1/96A</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-9284 9772
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/default.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>Klinik Liew</a>
+                </h4>
+                <div class="doc-prof">18 Jalan 54, Desa Jaya</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-6276 3505
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="profile-widget">
+                <div class="doctor-img">
+                  <a class="avatar"
+                    ><img alt="" src="assets/img/clinics/default.png"
+                  /></a>
+                </div>
+                <h4 class="doctor-name text-ellipsis">
+                  <a>Klinik Dr Hasbi</a>
+                </h4>
+                <div class="doc-prof">Jalan Puteri 7/13, Bandar Puteri</div>
+                <div class="user-country">
+                  <i class="fa fa-phone-square mr-2"></i>03-5882 3894
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="see-all">
+                <a class="see-all-btn" href="javascript:void(0);">Load More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="notification-box">
+          <div class="msg-sidebar notifications msg-noti">
+            <div class="topnav-dropdown-header">
+              <span>Messages</span>
+            </div>
+            <div class="drop-scroll msg-list-scroll" id="msg_list">
+              <ul class="list-box">
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">R</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author">Richard Miles </span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item new-message">
+                      <div class="list-left">
+                        <span class="avatar">J</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author">John Doe</span>
+                        <span class="message-time">1 Aug</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">T</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author"> Tarah Shropshire </span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">M</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author">Mike Litorus</span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">C</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author"> Catherine Manseau </span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">D</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author"> Domenic Houston </span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">B</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author"> Buster Wigton </span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">R</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author"> Rolland Webber </span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">C</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author"> Claire Mapes </span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">M</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author">Melita Faucher</span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">J</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author">Jeffery Lalor</span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">L</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author">Loren Gatlin</span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="chat.html">
+                    <div class="list-item">
+                      <div class="list-left">
+                        <span class="avatar">T</span>
+                      </div>
+                      <div class="list-body">
+                        <span class="message-author">Tarah Shropshire</span>
+                        <span class="message-time">12:28 AM</span>
+                        <div class="clearfix"></div>
+                        <span class="message-content"
+                          >Lorem ipsum dolor sit amet, consectetur
+                          adipiscing</span
+                        >
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="topnav-dropdown-footer">
+              <a href="chat.html">See all messages</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div id="delete_doctor" class="modal fade delete-modal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body text-center">
+              <img src="assets/img/sent.png" alt="" width="50" height="46" />
+              <h3>Are you sure want to delete this Doctor?</h3>
+              <div class="m-t-20">
+                <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                <button type="submit" class="btn btn-danger">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+
+  <!-- doctors23:17-->
+</html>
